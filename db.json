@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": "3127",
+      "name": "Gowthamaraj M",
+      "phone": "8903844107",
+      "email": "gowthamaraj04@gmail.com",
+      "password": "Gowtham@1234"
+    },
+    {
+      "id": "e667",
+      "name": "Dhayananth E",
+      "phone": "6382939365",
+      "email": "dhayananth@gmail.com",
+      "password": "Dhaya@1234"
+    },
+    {
+      "id": "3a7e",
+      "name": "SanjanaKumari_S",
+      "phone": "9080782051",
+      "email": "727822tuam047@skct.edu.in",
+      "password": "Sanjana@19"
+    }
+  ],
+  "forgot-password": [
+    {
+      "id": "b7fd",
+      "email": "gowthamaraj04@gmail.com"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1153",
+      "eventFor": "organizer",
+      "eventType": "personalized",
+      "eventLocation": "dsafdasf",
+      "eventDate": "2024-07-29",
+      "eventTime": "13:50",
+      "name": "Gowthamaraj M",
+      "phone": "08903844107",
+      "email": "gowthamaraj04@gmail.com"
+    },
+    {
+      "id": "6259",
+      "eventFor": "individual",
+      "eventType": "virtual",
+      "eventLocation": "adsf;dasjfsad",
+      "eventDate": "2024-07-29",
+      "eventTime": "11:18",
+      "name": "sdadf",
+      "phone": "09759024375",
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "a0ce",
+      "eventFor": "organizer",
+      "eventType": "exhibition",
+      "eventLocation": "Kovaipudhur",
+      "eventDate": "2024-07-29",
+      "eventTime": "16:18",
+      "name": "Gowtham",
+      "phone": "09759024375",
+      "email": "dhayananth@gmail.com"
+    },
+    {
+      "id": "eee8",
+      "eventFor": "individual",
+      "eventType": "exhibition",
+      "eventLocation": "Skct Kovaipudhur",
+      "eventDate": "2024-08-06",
+      "eventTime": "15:37",
+      "name": "Dhayananth E",
+      "phone": "06382939365",
+      "email": "dhayananth@gmail.com"
+    },
+    {
+      "id": "9b23",
+      "eventFor": "organizer",
+      "eventType": "personalized",
+      "eventLocation": "adf",
+      "eventDate": "2024-08-06",
+      "eventTime": "09:36",
+      "name": "Gowthamaraj M S",
+      "phone": "08903844107",
+      "email": "gowthamaraj04@gmail.com"
+    },
+    {
+      "id": "6cf7",
+      "eventFor": "organizer",
+      "eventType": "personalized",
+      "eventLocation": "adfad",
+      "eventDate": "2024-08-06",
+      "eventTime": "09:37",
+      "name": "Gowthamaraj M S",
+      "phone": "08903844107",
+      "email": "gowthamaraj04@gmail.com"
+    },
+    {
+      "id": "0b57",
+      "eventFor": "organizer",
+      "eventType": "personalized",
+      "eventLocation": "Kovaipudur",
+      "eventDate": "2024-08-06",
+      "eventTime": "10:29",
+      "name": "Dhayananth E",
+      "phone": "13281328791",
+      "email": "dhayananth@gmail.com"
+    }
+  ]
+}

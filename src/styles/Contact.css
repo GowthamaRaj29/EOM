@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .contact-page-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg #002B3F 0%, #005F80  100%);
+    padding: 10px;
+  }
+  
+  .contact-left-c, .contact-right-c {
+    flex: 1;
+    max-width: 35%; /* Further reduced max-width */
+    padding: 25px; /* Further reduced padding */
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 15px; /* Reduced margin */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-left-c:hover, .contact-right-c:hover {
+    transform: translateY(-10px);
+  }
+  
+  .contact-left-c h2, .contact-right-c h3 {
+    color: #333;
+    margin-bottom: 10px; /* Further reduced margin-bottom */
+  }
+  
+  .contact-left-c p, .contact-info-c p {
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  .contact-info-c p {
+    margin-top: 5px; /* Reduced margin-top */
+  }
+  
+  .contact-form-c .form-group-c {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Further reduced margin-bottom */
+  }
+  
+  .contact-form-c .form-group-c input,
+  .contact-form-c .form-group-c textarea {
+    padding: 20px; /* Further reduced padding */
+    margin-bottom: 8px; /* Further reduced margin-bottom */
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form-c .form-group-c input:focus,
+  .contact-form-c .form-group-c textarea:focus {
+    border-color: #667eea;
+  }
+  
+  button {
+    background-color: #667eea;
+    color: white;
+    padding: 18px 12px; /* Further reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #001351;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-page-c {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .contact-left-c, .contact-right-c {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+  }
+  

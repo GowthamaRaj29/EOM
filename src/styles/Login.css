@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.login-container-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #00171F;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  padding: 20px;
+}
+
+.login-card-l {
+height: 100%;
+  background: white;
+  color: #00171F;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 600px;
+}
+
+.logo-ll {
+  font-family: 'Sassy Frass', cursive;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group-ll {
+    max-width: 800px;
+  width: 100%;
+  margin-right: 25rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group-ll input[type="email"],
+input[type="password"]{
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.login-btn-ll {
+  width: 100%;
+  background: #007EA7;
+  color: white;
+  padding: 15px;
+  margin-right: 8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.login-btn-ll:hover {
+  background: #005F73;
+}
+
+.footer-text-ll {
+  text-align: center;
+}
+
+.footer-text-ll a {
+  color: #007EA7;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.or {
+  margin: 10px 0;
+}
+
+.signup-btn-ll {
+  width: 100%;
+  background: #007EA7;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.signup-btn-ll:hover {
+  background: #005F73;
+}
+
+.footer-logo-l {
+  font-family: 'Sassy Frass', cursive;
+  font-size: 3rem;
+  margin-top: 120px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .form-group-ll input {
+    width: 100%;
+  }
+  .footer-logo-l{
+    margin-top: 60px;
+  }
+}
+
+@media(max-width: 300px)
+{
+    .footer-logo-l{
+        margin-top: 50px;
+    }
+}
+
+@media(min-width: 300px)
+{
+    .footer-logo-l{
+        margin-top: 50px;
+    }
+}
+
+@media(min-width: 400px)
+{
+    .footer-logo-l{
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+  .form-group-ll input {
+    width: 100%;
+  }
+  .footer-logo-l{
+    margin-top: 63px;
+  }
+}

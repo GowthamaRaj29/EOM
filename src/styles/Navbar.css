@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00171F;
+  height: 80px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-n {
+  font-family: 'Sassy Frass', cursive;
+  font-size: 50px;
+  margin-left: 3rem;
+  color: white;
+  margin-top: 6px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 3rem;
+  margin-top: 2.3rem;
+}
+
+.nav-links li {
+  display: inline;
+  position: relative; /* Add this for dropdown positioning */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Remove underline effect for the user profile icon */
+.nav-links a.user-profile {
+  text-decoration: none; /* Ensure no underline effect */
+}
+
+.user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: -15px;
+  transition: transform 0.3s ease;
+}
+
+.user-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown when active */
+.nav-links .dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #00171F;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links a {
+    margin-right: 2rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Ensure dropdown menu also displays properly on mobile */
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+}
