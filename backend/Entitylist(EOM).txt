@@ -1,0 +1,125 @@
+1. User
+   - `UserID`: `INTEGER` (Primary Key)
+   - `Name`: `VARCHAR(255)`
+   - `Email`: `VARCHAR(255)`
+   - `Password`: `VARCHAR(255)`
+   - `Role`: `VARCHAR(50)` (e.g., Organizer, Attendee, Admin)
+   - `ProfilePicture`: `VARCHAR(255)` (URL)
+
+2. Event
+   - `EventID`: `INTEGER` (Primary Key)
+   - `Name`: `VARCHAR(255)`
+   - `Description`: `TEXT`
+   - `Date`: `DATE`
+   - `Time`: `TIME`
+   - `Location`: `VARCHAR(255)`
+   - `OrganizerID`: `INTEGER` (Foreign Key referencing UserID)
+   - `Category`: `VARCHAR(50)` (e.g., Conference, Workshop, Concert)
+   - `Status`: `VARCHAR(50)` (e.g., Upcoming, Ongoing, Past)
+
+3. Venue
+   - `VenueID`: `INTEGER` (Primary Key)
+   - `Name`: `VARCHAR(255)`
+   - `Address`: `VARCHAR(255)`
+   - `Capacity`: `INTEGER`
+   - `ContactInfo`: `VARCHAR(255)`
+
+4. Registration
+   - `RegistrationID`: `INTEGER` (Primary Key)
+   - `UserID`: `INTEGER` (Foreign Key referencing UserID)
+   - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+   - `RegistrationDate`: `DATETIME`
+   - `PaymentStatus`: `VARCHAR(50)`
+   - `TicketType`: `VARCHAR(50)` (e.g., General, VIP)
+
+5. Ticket
+   - `TicketID`: `INTEGER` (Primary Key)
+   - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+   - `TicketType`: `VARCHAR(50)`
+   - `Price`: `DECIMAL(10, 2)`
+   - `Availability`: `INTEGER`
+
+6. Session
+   - `SessionID`: `INTEGER` (Primary Key)
+   - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+   - `Name`: `VARCHAR(255)`
+   - `Description`: `TEXT`
+   - `StartTime`: `TIME`
+   - `EndTime`: `TIME`
+   - `SpeakerID`: `INTEGER` (Foreign Key referencing SpeakerID)
+
+7.Speaker
+
+SpeakerID: INTEGER (Primary Key)
+Name: VARCHAR(255)
+Biography: TEXT
+Photo: VARCHAR(255) (URL)
+ContactInfo: VARCHAR(255)
+Sponsor
+
+8.SponsorID: INTEGER (Primary Key)
+Name: VARCHAR(255)
+Logo: VARCHAR(255) (URL)
+ContactInfo: VARCHAR(255)
+SponsorshipLevel: VARCHAR(50) (e.g., Gold, Silver, Bronze)
+
+
+9. Feedback
+   - `FeedbackID`: `INTEGER` (Primary Key)
+   - `UserID`: `INTEGER` (Foreign Key referencing UserID)
+   - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+   - `Rating`: `INTEGER`
+   - `Comments`: `TEXT`
+   - `Date`: `DATETIME`
+
+10. Announcement
+    - `AnnouncementID`: `INTEGER` (Primary Key)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `Title`: `VARCHAR(255)`
+    - `Content`: `TEXT`
+    - `Date`: `DATETIME`
+
+11.Notification
+
+NotificationID: INTEGER (Primary Key)
+UserID: INTEGER (Foreign Key referencing UserID)
+Message: TEXT
+Date: DATETIME
+Status: VARCHAR(50) (e.g., Read, Unread)
+
+12. Payment
+    - `PaymentID`: `INTEGER` (Primary Key)
+    - `UserID`: `INTEGER` (Foreign Key referencing UserID)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `Amount`: `DECIMAL(10, 2)`
+    - `PaymentMethod`: `VARCHAR(50)`
+    - `PaymentDate`: `DATETIME`
+
+13. Schedule
+    - `ScheduleID`: `INTEGER` (Primary Key)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `Date`: `DATE`
+    - `StartTime`: `TIME`
+    - `EndTime`: `TIME`
+    - `ActivityDescription`: `TEXT`
+
+14. Gallery
+    - `ImageID`: `INTEGER` (Primary Key)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `ImageURL`: `VARCHAR(255)`
+    - `Caption`: `VARCHAR(255)`
+
+15. Task
+    - `TaskID`: `INTEGER` (Primary Key)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `Description`: `TEXT`
+    - `AssignedTo`: `INTEGER` (Foreign Key referencing UserID)
+    - `DueDate`: `DATE`
+    - `Status`: `VARCHAR(50)` (e.g., Pending, Completed)
+
+16. Report
+    - `ReportID`: `INTEGER` (Primary Key)
+    - `EventID`: `INTEGER` (Foreign Key referencing EventID)
+    - `Title`: `VARCHAR(255)`
+    - `Content`: `TEXT`
+    - `CreatedDate`: `DATETIME`
