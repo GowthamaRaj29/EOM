@@ -9,12 +9,13 @@ import Services from './pages/Service';
 import Contact from './pages/Contact';
 import Payment from './pages/Payment';
 import Bookings from './pages/BookNow'; // Adjust the import path as necessary
-import AdminLogin from './pages/AdminLogin'; // Import AdminLogin component
+import AdminLogin from './pages/AdminLogin';
+import AdminDash from './pages/AdminDash';
 
 function AppContent() {
   const location = useLocation();
   
-  const hideNavbarPaths = ['/login', '/register', '/forgot-password', '/admin-login']; // Added /admin-login to the array
+  const hideNavbarPaths = ['/login', '/register', '/forgot-password', '/admin-login','/admin-dashboard']; // Added /admin-login to the array
 
   return (
     <div className='App'>
@@ -28,7 +29,8 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/admin-login" element={<AdminLogin />} /> {/* New AdminLogin route */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<AdminDash/>} />{/* New AdminLogin route */}
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </div>

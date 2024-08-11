@@ -3,6 +3,8 @@ package com.example.backend.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -17,8 +19,9 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/api/**").permitAll()  // Permit all requests to /api/**
-                .anyRequest().authenticated()           // Other requests need authentication
+                .requestMatchers("/api/admin/login").permitAll()  // Permit all requests to /api/admin/login
+                .requestMatchers("/api/**").authenticated()       // Other /api/** requests need authentication
+                .anyRequest().permitAll()                         // Permit all other requests
             );
 
         return http.build();
@@ -33,7 +36,12 @@ public class SecurityConfig {
         configuration.setAllowCredentials(true);                // Allow credentials (cookies, etc.)
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/api/**", configuration); // Apply CORS settings to /api/**
+        source.registerCorsConfiguration("/**", configuration); // Apply CORS settings to all endpoints
         return source;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
